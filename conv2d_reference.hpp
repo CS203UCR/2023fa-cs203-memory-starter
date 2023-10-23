@@ -11,8 +11,6 @@
 void __attribute__((noinline)) conv2d_reference(int64_t **M, int64_t **K, uint32_t m_size, uint32_t k_size, int64_t **R) {
 		      // parameters you can use for whatever purpose you want (e.g., tile sizes)
 
-    int32_t border;
-    border = k_size>>1;
 	for(int32_t i = 0; i < m_size-k_size; i++) {
 		for(int32_t j = 0; j < m_size-k_size; j++) {
             int64_t sum=0;
